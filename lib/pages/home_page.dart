@@ -15,6 +15,13 @@ class _HomePageState extends State<HomePage> {
 
   int indexBottonNavigationBar = 0;
 
+  setPaginaAtual(page) {
+    //controlador  Navegação com PageView, Bottom Navigation e Animações
+    setState(() {
+      indexBottonNavigationBar = page;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,13 +84,14 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: PageView(
-        controller: _pageController,
-        children: [
-          const OnePage(), // Item 0
-          Container(color: Colors.red), // Item 1
-          Container(color: Colors.yellow), // Item2
-        ],
-      ),
+          controller: _pageController,
+          onPageChanged:
+              setPaginaAtual, // controlador de Navegação com PageView, Bottom Navigation e Animações
+          children: [
+            const OnePage(), // Item 0
+            Container(color: Colors.red), // Item 1
+            Container(color: Colors.yellow), // Item2
+          ]),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: indexBottonNavigationBar,
         onTap: (int page) {
@@ -102,7 +110,7 @@ class _HomePageState extends State<HomePage> {
             label: "Item 1",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.local_laundry_service_sharp),
+            icon: Icon(Icons.star),
             label: "Item 2",
           ),
           BottomNavigationBarItem(
