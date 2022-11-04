@@ -6,12 +6,12 @@ void main(List<String> args) {
 }
 
 class MyApp extends StatelessWidget {
-  // ignore: prefer_const_constructors_in_immutables
   MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(primaryColor: Colors.green),
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );

@@ -26,7 +26,7 @@ class OnePage extends StatelessWidget {
           ),
         ),
         const Text(
-          "---Slice to end--->",
+          "---Slice to left---",
           textAlign: TextAlign.left,
         ),
         Row(
