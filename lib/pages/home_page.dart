@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             ListTile(
-              title: const Text("Item 1"),
+              title: Text("Item 1"),
               trailing: const Icon(Icons.arrow_forward_sharp),
               onTap: () {
                 _pageController.jumpToPage(0);
@@ -89,8 +89,8 @@ class _HomePageState extends State<HomePage> {
               setPaginaAtual, // controlador de Navegação com PageView, Bottom Navigation e Animações
           children: [
             const OnePage(), // Item 0
-            Container(color: Colors.red), // Item 1
-            Container(color: Colors.yellow), // Item2
+            Container(color: Colors.pink), // Item 1
+            Container(color: Colors.yellowAccent), // Item2
           ]),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: indexBottonNavigationBar,
