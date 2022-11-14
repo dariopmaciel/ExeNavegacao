@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             ListTile(
-              title: Text("Item 1"),
+              title: const Text("Item 1"),
               trailing: const Icon(Icons.arrow_forward_sharp),
               onTap: () {
                 _pageController.jumpToPage(0);
